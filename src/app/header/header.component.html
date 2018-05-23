@@ -1,0 +1,29 @@
+<p class="message">
+  header works!
+</p>
+<div class="row">
+  <div class="col-sm-4">
+    <app-loader [loader]="loader.user "></app-loader>
+    <ul>
+        <li *ngFor="let user of promise.userDetails">
+          {{ user.name }}
+        </li>
+    </ul>
+  </div>
+  <div class="col-sm-4 pull-right">
+    <app-loader [loader]="loader.org"></app-loader>
+    <ul>
+        <li *ngFor="let org of promise.orgDetails">
+          {{ org.orgName }}
+        </li>
+    </ul>
+  </div>
+  <div class="col-sm-4 pull-right">
+    <app-loader [loader]="loader.role"></app-loader>
+    <ul>
+        <li *ngFor="let role of promise.roles">
+          {{ role.roleName }}
+        </li>
+    </ul>
+  </div>
+</div>

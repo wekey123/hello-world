@@ -1,0 +1,37 @@
+// Here I add my custom variables
+//@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+$red: red;
+
+.header-title {
+	color: $red
+}
+
+%message-shared {
+  border: 1px solid;
+  padding: 10px;
+}
+
+@mixin set-border-color($color) {
+	border-color: $color;
+}
+
+.message {
+  @extend %message-shared;
+  @include set-border-color(gray);
+}
+
+.success {
+  @extend %message-shared;
+  @include set-border-color(green);
+}
+
+.error {
+  @extend %message-shared;
+  @include set-border-color(red);
+}
+
+.warning {
+  @extend %message-shared;
+  @include set-border-color(yellow);
+}
